@@ -1,53 +1,46 @@
-/* styles.css */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffe6f0;
-  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  color: #333;
+  text-align: center;
   padding: 20px;
 }
 
 h1 {
-  text-align: center;
-  color: #cc0066;
-  font-size: 2em;
+  color: #d63384;
   margin-bottom: 30px;
 }
 
-.malla {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
+#malla-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .ramo {
-  background: #fff0f5;
-  border: 2px solid #ff99cc;
-  border-radius: 12px;
-  padding: 15px;
+  background-color: #ffe0ec;
+  border: 2px solid #d63384;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  font-weight: 500;
-  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(214, 51, 132, 0.2);
+  position: relative;
 }
 
 .ramo:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffd1e0;
 }
 
-.ramo.completed {
-  background-color: #ffcce0;
-  text-decoration: line-through;
-  color: #999;
-  border: 2px solid #ff66a3;
+.ramo.aprobado {
+  background-color: #d63384;
+  color: white;
+  border: 2px solid #a0245e;
 }
 
-.ramo.locked {
-  background-color: #ffe6ee;
-  color: #aaa;
-  cursor: not-allowed;
-  border: 2px dashed #ff99cc;
+.ramo.bloqueado {
+  opacity: 0.4;
   pointer-events: none;
 }
